@@ -1,0 +1,34 @@
+user table=> user id primary key, usertype, email,password
+student=> student id, name,dept id ,user id foreign key
+teacher=> teacher id,name,age,user id foreign key
+class=> teacher id,dept id primary and foreign key
+department=> dept id primary key,name  
+
+create table user_table(user_id int auto_increment primary key, usertype varchar(10),email varchar(20),password varchar(25));
+
+create table student(student_id int primary key,name varchar
+(10),dept_id int, user_id int,foreign key(dept_id) references department(dep
+t_id) on delete cascade,foreign key(user_id) references user_table(user_id)
+on delete cascade);
+
+create table teacher(teacher_id int primary key, t_name varchar(10),age int,user_id int,foreign key(user_id) references user_table(user_id)on delete cascade);
+
+create table department(dept_id int primary key,d_name varchar(10));
+
+create table class(teacher_id int,dept_id int,hours int,primary key(teacher_id,dept_id),foreign key(teacher_id) references teacher(teacher_id) on delete cascade,foreign key(dept_id) references department(dept_id) on delete cascade);
+
+insert into user_table values(1,'S','arun@gmail.com','arun'),(2,'S','akash@gmail.com','akash'),
+(3,'T','ram@gmail.com','ram'),(4,'T','ramya@gmail.com','ramya');
+
+insert into student values(11,'Arun',21,1),(12,'Akash',22,2),
+(13,'Anu',22,null),(14,'Tanu',22,null);
+
+
+insert into department values(21,'Computer'),(22,'Biology');
+
+
+insert into teacher values(31,'Ram',35,3),(32,'Ramya',32,4),(33,'Harish',30,null)
+(34,'Tanya',28,null);
+
+insert into class values(31,21,40),(32,21,30),(33,22,20),
+(34,22,25);

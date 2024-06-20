@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark gray color */
+}
+
+#container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between child elements */
+}
+
+#table-list {
+    width: 30%;
+    padding: 20px;
+    float:left;
+}
+
+#table-data {
+    width: 50%; /* Adjusted width to leave some space on the right */
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0;
+}
+
+.table-link {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black; /* Blue color for table links */
+    cursor: pointer;
+}
+
+.table-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.edit-button {
+    margin-top: 20px;
+}
+
+.edit-button a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.edit-button a:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
